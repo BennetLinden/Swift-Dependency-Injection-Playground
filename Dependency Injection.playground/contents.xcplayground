@@ -4,7 +4,7 @@
         <page name='Table of Contents'/>
         <page name='1. Dependency Injection Flavours'/>
         <page name='2. The Problem'/>
+        <page name='3. Providing Dependencies'/>
         <page name='New Page'/>
-        <page name='3. The fuckup'/>
     </pages>
 </playground>

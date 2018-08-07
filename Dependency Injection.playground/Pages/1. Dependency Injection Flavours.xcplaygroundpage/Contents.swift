@@ -14,7 +14,7 @@
  * Dependencies can be made immutable by declaring them as let
  * Adding new dependencies will trigger compile time errors
  
- See the following example of a FileLoader class that has an initializer-based dependency on a FileManager:
+ See the following example of a `FileLoader` class that has an initializer-based dependency on a `FileManager`:
  */
 
 import Foundation
@@ -37,7 +37,7 @@ class FileLoader {
  * No need to implement a custom initializer
  * Change dependencies during life-cycle of object, for example to set a new delegate
  
- See the following example of a NetworkService with a weak delegate property, which gets assigned after the NetworkService has been initialized:
+ See the following example of a `NetworkService` with a weak delegate property, which gets assigned after the `NetworkService` has been initialized:
  */
 
 protocol NetworkDelegate: AnyObject { }
@@ -61,7 +61,7 @@ networkService.delegate = Worker()
  * No need to define a global (mutable) property
  * Simple way to inject a dependency in a legacy class without the need to refactor
  
- See the following example of a DataService object with a function to perform some task with data on a queue. Instead of defining the queue as a property inside the DataService, it (together with data) is passed as a parameter dependency in the function:
+ See the following example of a `DataService` object with a function to perform some task with data on a `DispatchQueue`. Instead of defining the queue as a property inside the `DataService`, it (together with data) is passed as a parameter dependency in the function:
  */
 
 class DataService {

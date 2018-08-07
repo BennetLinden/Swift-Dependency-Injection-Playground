@@ -32,22 +32,22 @@ class SettingsViewController: ViewController, View {
 
 /*:
  ## Initializing
- Now that we've defined our View and Presenter classes, let's initialize them:
+ Now that we've defined our `View` and `Presenter` classes, let's initialize them:
  */
 
-// Initialize the Presenter
+// Initialize the `Presenter`
 let presenter = SettingsPresenter()
 
-// Initialize the ViewController with the Presenter
+// Initialize the `ViewController` with the `Presenter`
 let viewController = SettingsViewController(presenter: presenter)
 
-// Assign the ViewController to the Presenter's view property
+// Assign the `ViewController` to the `Presenter's` view property
 presenter.view = viewController
 
 /*:
- Initializing the View and the Presenter is pretty straightforward. But where is this supposed to happen?
+ Initializing the `View` and the `Presenter` is pretty straightforward. But where is this supposed to happen?
  
- Imagine a HomeViewController that can navigate to the SettingsViewController. We could do something like this:
+ Imagine a `HomeViewController` that can navigate to the `SettingsViewController`. We could do something like this:
  */
 
 class HomeViewController: ViewController {
@@ -61,7 +61,7 @@ class HomeViewController: ViewController {
 }
 
 /*:
- In this case, the HomeViewController is responsible for creating the SettingsViewController, the SettingsPresenter, and connecting the two. But what happens when either the SettingsPresenter or the SettingsViewController has more dependencies? The HomeViewController should not be responsible for managing all their dependencies.
+ In this case, the `HomeViewController` is responsible for creating the `SettingsViewController`, the `SettingsPresenter`, and connecting the two. But what happens when either the `SettingsPresenter` or the `SettingsViewController` has more dependencies? The `HomeViewController` should not be responsible for managing all their dependencies.
  */
 
 /*:
