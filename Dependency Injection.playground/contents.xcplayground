@@ -5,6 +5,7 @@
         <page name='1. Dependency Injection Flavours'/>
         <page name='2. The Problem'/>
         <page name='3. Providing Dependencies'/>
+        <page name='4. View Controller Factory'/>
         <page name='New Page'/>
     </pages>
 </playground>
