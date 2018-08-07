@@ -2,6 +2,6 @@
 
 import Foundation
 
-public class SettingsPresenter {
+public class HomePresenter {
     public init() { }
 }

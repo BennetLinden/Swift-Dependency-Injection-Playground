@@ -35,13 +35,13 @@ class SettingsViewController: ViewController, View {
  Now that we've defined our **View** and **Presenter** classes, let's initialize them:
  */
 
-// Initialize the **Presenter**
+// Initialize the Presenter
 let presenter = SettingsPresenter()
 
-// Initialize the **ViewController** with the **Presenter**
+// Initialize the ViewController with the Presenter
 let viewController = SettingsViewController(presenter: presenter)
 
-// Assign the **ViewController** to the **Presenter's** view property
+// Assign the ViewController to the Presenter's view property
 presenter.view = viewController
 
 /*:

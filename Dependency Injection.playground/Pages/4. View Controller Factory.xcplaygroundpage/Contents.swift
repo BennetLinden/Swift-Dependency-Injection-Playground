@@ -3,7 +3,7 @@
  ****
  # View Controller Factory
  
- Now that we have a **DependencyContainer** to manage dependencies, we can use it to create a SettingsViewController. But as the **DependencyContainer** gets bigger, it can do a lot more than just creating a **SettingsViewController**. Exposing all of its factory methods and dependencies is not preferred, so we need to mask them.
+ Now that we have a **DependencyContainer** to manage dependencies, we can use it to create a SettingsViewController. But as the **DependencyContainer** gets bigger, it can do a lot more than just creating a **SettingsViewController**. Exposing all of its factory methods and dependencies is not preferred, so it's a good idea to mask them.
  
  We can do this by using a **SettingsViewControllerFactory** protocol with a single factory method for creating the **SettingsViewController**:
  */
@@ -29,6 +29,7 @@ class HomeViewController: ViewController {
          settingsViewControllerFactory: SettingsViewControllerFactory) {
         self.presenter = presenter
         self.settingsViewControllerFactory = settingsViewControllerFactory
+        super.init()
     }
     
     func openSettings() {

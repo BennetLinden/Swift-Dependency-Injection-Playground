@@ -6,6 +6,7 @@
         <page name='2. The Problem'/>
         <page name='3. Providing Dependencies'/>
         <page name='4. View Controller Factory'/>
+        <page name='5. Adding Dependencies'/>
         <page name='New Page'/>
     </pages>
 </playground>

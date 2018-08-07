@@ -8,6 +8,7 @@
  1. [The Problem](2.%20The%20Problem)
  1. [Providing Dependencies](3.%20Providing%20Dependencies)
  1. [View Controller Factory](4.%20View%20Controller%20Factory)
+ 1. [Adding Dependencies](5.%20Adding%20Dependencies)
  
  ****
  [Next](@next)
