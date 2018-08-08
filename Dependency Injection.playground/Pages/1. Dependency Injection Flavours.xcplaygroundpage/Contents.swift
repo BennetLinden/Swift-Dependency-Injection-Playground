@@ -16,7 +16,6 @@
  
  See the following example of a **FileLoader** class that has an initializer-based dependency on a **FileManager**:
  */
-
 import Foundation
 
 class FileLoader {
@@ -27,7 +26,6 @@ class FileLoader {
         self.fileManager = fileManager
     }
 }
-
 /*:
  ## Property Injection
  Sometimes it's not possible to add your own initializer with dependencies, or you don't have the dependencies ready yet. In that case you can resort to property injection. Instead of injecting an object's dependencies in its initializer, they can simply be assigned afterwards.
@@ -39,7 +37,6 @@ class FileLoader {
  
  See the following example of a **NetworkService** with a weak delegate property, which gets assigned after the **NetworkService** has been initialized:
  */
-
 protocol NetworkDelegate: AnyObject { }
 
 class Worker: NetworkDelegate { }
@@ -51,7 +48,6 @@ class NetworkService {
 
 let networkService = NetworkService()
 networkService.delegate = Worker()
-
 /*:
  ## Parameter Injection
  Often a specific dependency is only needed once. So instead of defining a global property, and having to change an object's initializer or expose properties as mutable, the depencency can be injected through parameter injection.
@@ -63,7 +59,6 @@ networkService.delegate = Worker()
  
  See the following example of a **DataService** object with a function to perform some task with data on a **DispatchQueue**. Instead of defining the queue as a property inside the **DataService**, it (together with data) is passed as a parameter dependency in the function:
  */
-
 class DataService {
     
     func performTask(with data: Data, on queue: DispatchQueue) {
@@ -72,7 +67,6 @@ class DataService {
         }
     }
 }
-
 /*:
  ****
  [Table of Contents](Table%20of%20Contents) | [Previous](@previous) | [Next](@next)
