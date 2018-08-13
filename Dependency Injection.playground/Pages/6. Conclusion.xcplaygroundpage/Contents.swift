@@ -9,8 +9,9 @@
  Through **ViewControllerFactory** protocols it can mask its functionalities and only expose the method needed to create a specific **ViewController**, without knowing anything about its dependencies. **Factory** protocols are not limited to **ViewControllers**, but can be used to expose any method of the **DependencyContainer**. 
  
  ## Example Dependency Provider
- An example of a **DependencyProvider** with multiple dependency properties and factory methods, and acts as Factory for ViewControllers and UseCases:
+ An example of a **DependencyProvider** with multiple dependency properties and factory methods, that acts as Factory for ViewControllers and UseCases:
  */
+
 import Foundation
 import UIKit
 
@@ -26,9 +27,11 @@ protocol DependencyProvider: HomeViewControllerFactory, LoadHomeFeedUseCaseFacto
     func makeSettingsViewController() -> UIViewController
     func makeSettingsPresenter() -> SettingsPresenter
 }
+
 /*:
  With corresponsing **DependencyContainer**:
  */
+
 class DependencyContainer: DependencyProvider {
     
     let dataRepository: DataRepository = DataRepository()
@@ -56,7 +59,8 @@ class DependencyContainer: DependencyProvider {
         return SettingsPresenter(dataRepository: dataRepository)
     }
 }
+
 /*:
  ****
- [Table of Contents](Table%20of%20Contents) | [Previous](@previous) | [Next](@next)
+ [Table of Contents](Table%20of%20Contents) | [Previous](@previous)
  */
