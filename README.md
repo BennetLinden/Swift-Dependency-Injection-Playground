@@ -1,5 +1,9 @@
 # Dependency Injection in Swift
-A Playground that describes how to implement Dependency Injection with containers and factories in Swift.
+A Playground that describes how to implement Dependency Injection with Containers and Factories in Swift.
+
+## Contents
+The Playground contains several pages with a step-by-step approach to implementing Dependency Injection in Swift.
+Each page contains additional supporting classes and protocols in a separate sources folder.
 
 ## Getting Started
 1. Clone the repository or download the Playground
